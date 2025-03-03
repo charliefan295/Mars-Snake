@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>火星贪吃蛇</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+        #game-container {
+            position: relative;
+        }
+        #gameCanvas {
+            border: 2px solid #ff6b6b;
+            background-image: url('WechatIMG256.jpg');
+            background-color: #682C0E;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 0 20px rgba(255,107,107,0.3);
+            border-radius: 10px;
+        }
+        #score {
+            text-align: center;
+            font-size: 28px;
+            margin: 20px 0;
+            text-shadow: 0 0 10px rgba(255,107,107,0.5);
+            color: #ff6b6b;
+        }
+        #start-btn {
+            padding: 12px 24px;
+            font-size: 18px;
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255,107,107,0.3);
+        }
+        #start-btn:hover {
+            background-color: #ff8585;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255,107,107,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="score">分数: 0</div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <button id="start-btn">开始探索</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
